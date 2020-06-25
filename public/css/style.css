@@ -1,0 +1,141 @@
+.dogBlock img, .catBlock img{
+    max-width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+.Dog{
+    font-size: large;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: brown;
+    color: #fff;
+}
+
+.Cat{
+    font-size: large;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: yellowgreen;
+    color: #fff;
+}
+
+p{
+    text-align: center;
+    font-size: 50px;
+}
+
+.dislike img:hover{
+    width: 200%;   
+}
+
+
+.dislike{
+    max-width: 100%;
+    border: 1.5px solid black;
+    background:rgba(255, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.dislike img{
+    transition: 3s;
+    width: 50%;
+}
+
+.like{
+    max-width: 100%;
+    border: 1.5px solid black;
+    background:rgba(0, 255, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.like img{
+    width: 50%;
+    transition: 3s;
+}
+.like img:hover{
+    width: 200%;   
+}
+
+.like-dog, .like-cat{
+background: rgba(0, 255, 0, 0.5);
+transition: 3s;
+}
+.like-dog:hover, .like-cat:hover, .dislike-dog:hover, .dislike-cat:hover{
+    font-size: 30px;
+    border-radius: 10px;
+}
+.dislike-dog, .dislike-cat{
+background: red;
+transition: 3s;
+}
+
+
+.dogBlock, .buttons, .catBlock, .status, .loginform, .login, .like-dog, .dislike-dog, .like-cat, .dislike-cat{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+.status{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login:hover{
+    border-radius: 5px;
+    background-color: brown;
+    color: #FFF;
+    font-size: 40px;
+}
+.loginButt{
+    background: brown;
+    border: none;
+    font-size: large;
+    border-radius: 5px;
+    
+}
+
+.login{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: 2s;
+}
+
+
+.loginform input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.loginform{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+.register:hover{
+   
+    font-size: 20px;
+    font-family: cursive;
+}
+.register{
+    background: beige;
+    border: 2px solid black;
+    transition: 3s;
+}
+#result{
+    position: absolute;
+    top: -3px;
+    right: 30px;
+}
+
+
+
+.block {
+    display: block;
+}
