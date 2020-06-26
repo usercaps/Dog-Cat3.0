@@ -75,7 +75,10 @@ transition: 3s;
 }
 
 
-.dogBlock, .buttons, .catBlock, .status, .loginform, .login, .like-dog, .dislike-dog, .like-cat, .dislike-cat{
+.dogBlock, .buttons, .catBlock, .status, .loginform, .login, .likesblockcat, .likesblockdog, .nextdog, .infoButtonOfDog, .infoButtonOfCat{
+    display: none;
+}
+.hide{
     display: none;
 }
 
