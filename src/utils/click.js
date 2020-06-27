@@ -1,7 +1,6 @@
 import { DogButton, CatButton } from './fetchinfo';
-
 let
-//login-register
+    //login-register
     login = document.querySelector('.login'),
     loginButt = document.querySelector('.loginButt'),
     loginform = document.querySelector('.loginform'),
@@ -30,74 +29,76 @@ let
     //all
     some = document.querySelector('.status'),
     likeBlock = document.querySelector('.like'),
+    // breedName,
     dislikeBlock = document.querySelector('.dislike');
 //намудрил с let ))
 //кнопка логина
-    function loginB() {
-        loginButt.addEventListener('click', () => {
-            login.classList.remove('block');
-            loginform.classList.add('block');
-            buttons.classList.remove('block');
-            dogBlock.classList.remove('block');
-            catBlock.classList.remove('block');
-        });
-    }
-    export { loginB };
+function loginB() {
+    loginButt.addEventListener('click', () => {
+        login.classList.remove('block');
+        loginform.classList.add('block');
+        buttons.classList.remove('block');
+        dogBlock.classList.remove('block');
+        catBlock.classList.remove('block');
+    });
+}
+export { loginB };
 
-    //кнопка регистрации
-    function say_hi(){
-        let fname = document.getElementById('FirstName').value;
-        paragraph.innerHTML = "hello: " + fname;
-    };
-    
-    function registerB() {
-        register.addEventListener('click', () => {
-            say_hi();
-            loginform.classList.remove('block');
-            buttons.classList.add('block');
-            result.classList.add('block');
-            login.classList.remove('block');
-            likesOfDog.classList.add('block');
-            likesOfCat.classList.add('block');
-            infoButtonOfDog.classList.add('block');
-            infoButtonOfCat.classList.add('block');
-            catButton.classList.remove('block');
-            // dogButton.classList.remove('block');
-            // dogButton.classList.add('hide');
-        });
-    }
-    export { registerB };
+//кнопка регистрации
+function say_hi() {
+    let fname = document.getElementById('FirstName').value;
+    paragraph.innerHTML = "hello: " + fname;
+};
+
+function registerB() {
+    register.addEventListener('click', () => {
+        say_hi();
+        loginform.classList.remove('block');
+        buttons.classList.add('block');
+        result.classList.add('block');
+        login.classList.remove('block');
+        likesOfDog.classList.add('block');
+        likesOfCat.classList.add('block');
+        infoButtonOfDog.classList.add('block');
+        infoButtonOfCat.classList.add('block');
+        catButton.classList.remove('block');
+        dogButton.classList.remove('block');
+        // dogButton.classList.add('hide');
+    });
+}
+export { registerB };
 
 
-    //кнопка след собаки без регистрации
+//кнопка след собаки без регистрации
 function nextButtnDog() {
-    dogButton.addEventListener('click', ()=>{
+    dogButton.addEventListener('click', () => {
         DogButton();
         // alert('ввойдите чтобы ставить лайки');
-        
-        if(confirm('если нажать да то все ок, если нет то удалится кнопка')){
+
+        if (confirm('если нажать да то все ок, если нет то удалится кнопка')) {
             DogButton();
-        // alert('ввойдите чтобы ставить лайки');
-        }else{
+            // alert('ввойдите чтобы ставить лайки');
+        } else {
             dogButton.classList.add('hide');
             dogButton.classList.remove('block');
-            alert('ввойдите чтобы ставить лайки, и дальше смотреть собачек');       
+            alert('ввойдите чтобы ставить лайки, и дальше смотреть собачек');
         }
     })
-    
+
 }
-export{nextButtnDog};
+export { nextButtnDog };
 
 //кнопка показа собак
-    function dogShow() {
-        dog.addEventListener('click', () => {
-            DogButton();
-            dogBlock.classList.add('block');
-            buttons.classList.remove('block');
-            dogButton.classList.add('block');
-            // dogButton.classList.remove('hide');
-        })
-    }
+function dogShow() {
+    dog.addEventListener('click', () => {
+        DogButton();
+        dogBlock.classList.add('block');
+        buttons.classList.remove('block');
+        dogButton.classList.add('block');
+        // dogButton.classList.remove('hide');
+
+    });
+};
 export { dogShow };
 
 //кнопка отправки лайков собак
@@ -146,19 +147,29 @@ function catShow() {
         catBlock.classList.add('block');
         buttons.classList.remove('block');
         document.querySelector('.nextcat').classList.add('block');
+
     })
+
 }
 export { catShow };
 
 //кнопка след котов
 function nextButtnCat() {
-    catButton.addEventListener('click', ()=>{
+    catButton.addEventListener('click', () => {
         CatButton();
-        alert('ввойдите чтобы ставить лайки');
+        // alert('ввойдите чтобы ставить лайки');
+
+        if (confirm('если нажать да то все ок, если нет то удалится кнопка')) {
+            CatButton();
+            // alert('ввойдите чтобы ставить лайки');
+        } else {
+            catButton.classList.add('hide');
+            catButton.classList.remove('block');
+            alert('ввойдите чтобы ставить лайки, и дальше смотреть котиков');
+        }
     })
-    
 }
-export{nextButtnCat};
+export { nextButtnCat };
 
 //лайки
 function likeCats() {
@@ -198,6 +209,5 @@ function infoCat() {
 }
 export { infoCat };
 
-
-
+// export { breedName };
 
